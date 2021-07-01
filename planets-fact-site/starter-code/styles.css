@@ -178,6 +178,46 @@ p{
     top: 248px;
 }
 
+.scaling-svg-container-mars{
+    position: absolute;
+    width: 336px;
+    height: 336px;
+    left: 312px;
+    top: 305px;
+}
+
+.scaling-svg-container-jupiter{
+    position: absolute;
+    width: 582px;
+    height: 582px;
+    left: 189px;
+    top: 182px;
+}
+
+.scaling-svg-container-saturn{
+    position: absolute;
+    width: 666.09px;
+    height: 666.09px;
+    left: 146.95px;
+    top: 155.95px;
+}
+
+.scaling-svg-container-uranus{
+    position: absolute;
+    width: 458px;
+    height: 458px;
+    left: 251px;
+    top: 244px;
+}
+
+.scaling-svg-container-neptune{
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    left: 255px;
+    top: 248px;
+}
+
 .scaling-svg {
     position: absolute; 
     height: 100%; 
@@ -212,7 +252,48 @@ img{
     top: 554px;
 }
 
+#surfaceImageMars{
+    position: absolute;
+    width: 163px;
+    height: 199px;
+    left: 392px;
+    top: 554px;
+}
+
+#surfaceImageJupiter{
+    position: absolute;
+    width: 163px;
+    height: 199px;
+    left: 389px;
+    top: 534px;
+}
+
+#surfaceImageSaturn{
+    position: absolute;
+    width: 163px;
+    height: 199px;
+    left: 384px;
+    top: 524px;   
+}
+
+#surfaceImageUranus{
+    position: absolute;
+    width: 163px;
+    height: 199px;
+    left: 379px;
+    top: 534px;
+}
+
+#surfaceImageNeptune{
+    position: absolute;
+    width: 163px;
+    height: 199px;
+    left: 393px;
+    top: 554px;
+}
+
 /* Buttons start (Desktop view) */
+/* Mercury */
 .overview-button{  
     left: 925px;
     top: 577px;
@@ -229,6 +310,11 @@ img{
 .overview-button:hover{
     background: rgb(56,56,79)!important;
   }
+
+  .overview-button.active{
+      background-color: rgb(65,158,187);
+  }
+
 
 .overview-number{
     position: absolute;
@@ -277,6 +363,11 @@ img{
     border-width: 1px;
     background-color: transparent;
     padding:0;
+
+}
+
+.structure-button.active{
+    background-color: rgb(65,158,187);
 }
 
 .structure-button:hover{
@@ -321,7 +412,11 @@ img{
 
 #structureImage{
     visibility: hidden;
-}
+    }
+
+    #surfaceImageVenus{
+        visibility: hidden;
+    }
 
 .surface-button{
     position: absolute;
@@ -340,8 +435,36 @@ img{
     background: rgb(56,56,79)!important;
 }
 
+.surface-button.active{
+    background-color: rgb(65,158,187);
+}
+
 #surfaceImage{
     visibility:hidden ;
+}
+
+#surfaceImageEarth{
+    visibility: hidden;
+}
+
+#surfaceImageMars{
+    visibility: hidden;
+}
+
+#surfaceImageJupiter{
+    visibility: hidden;
+}
+
+#surfaceImageSaturn{
+    visibility: hidden;
+}
+
+#surfaceImageUranus{
+    visibility: hidden;
+}
+
+#surfaceImageNeptune{
+    visibility: hidden;
 }
 
 .surface-number{
@@ -377,6 +500,100 @@ img{
     text-transform: uppercase;
     color: #FFFFFF;
     }
+
+    /* Venus */
+    #venusoverviewButton.active{
+        background-color: rgb(237,162,73);
+    }
+
+    #venusstructureButton.active{
+        background-color: rgb(237,162,73);
+    }
+
+    #venussurfaceButton.active{
+        background-color: rgb(237,162,73);       
+    }
+
+    /* Earth */
+    #earthoverviewButton.active{
+        background-color: rgb(109,46,213);
+    }
+
+    #earthstructureButton.active{
+        background-color: rgb(109,46,213);
+    }
+
+    #earthsurfaceButton.active{
+        background-color: rgb(109,46,213);       
+    }
+
+    /* Mars */
+    #marsoverviewButton.active{
+        background-color: rgb(209,76,50);
+    }
+
+    #marsstructureButton.active{
+        background-color: rgb(209,76,50);
+    }
+
+    #marssurfaceButton.active{
+        background-color: rgb(209,76,50);      
+    }   
+
+
+        /* Jupiter */
+        #jupiteroverviewButton.active{
+            background-color: rgb(216,58,52);
+        }
+    
+        #jupiterstructureButton.active{
+            background-color: rgb(216,58,52);
+        }
+    
+        #jupitersurfaceButton.active{
+            background-color: rgb(216,58,52);      
+        }   
+
+        /* Saturn */
+        #saturnoverviewButton.active{
+            background-color: rgb(205,81,32);
+        }
+    
+        #saturnstructureButton.active{
+            background-color: rgb(205,81,32);
+        }
+    
+        #saturnsurfaceButton.active{
+            background-color: rgb(205,81,32);     
+        }   
+
+        /* Uranus */
+        #uranusoverviewButton.active{
+            background-color: rgb(30,193,162);
+        }
+    
+        #uranusstructureButton.active{
+            background-color: rgb(30,193,162);
+        }
+    
+        #uranussurfaceButton.active{
+            background-color: rgb(30,193,162);    
+        }  
+
+        /* Neptune */
+
+        #neptuneoverviewButton.active{
+            background-color: rgb(45,104,240);
+        }
+    
+        #neptunestructureButton.active{
+            background-color: rgb(45,104,240);
+        }
+    
+        #neptunesurfaceButton.active{
+            background-color: rgb(45,104,240);   
+        }  
+
 /* Buttons end (Desktop view) */
 
 .rotation-box{
@@ -458,6 +675,7 @@ img{
     text-transform: uppercase;
     color: #FFFFFF;
     margin:0;
+    width:200px;
 }
 
 .revolution-p{
@@ -663,6 +881,47 @@ img{
         
        }
 
+       .scaling-svg-container-mars{
+        position: absolute;
+        width: 213px;
+        height: 213px;
+        left: 278px;
+        top: 292px;
+       }
+
+       .scaling-svg-container-jupiter{
+        position: absolute;
+        width: 369px;
+        height: 369px;
+        left: 200px;
+        top: 214px;
+       }
+
+       .scaling-svg-container-saturn{
+        position: absolute;
+        width: 422px;
+        height: 422px;
+        left: 173px;
+        top: 187px;
+        
+       }
+
+       .scaling-svg-container-uranus{
+        position: absolute;
+        width: 290px;
+        height: 290px;
+        left: 240px;
+        top: 253px;        
+       }
+
+       .scaling-svg-container-neptune{
+        position: absolute;
+        width: 285px;
+        height: 285px;
+        left: 242px;
+        top: 256px;
+       }
+
     .scaling-svg {
         position: absolute; 
         height: 100%; 
@@ -696,6 +955,46 @@ img{
         height: 120px;
         left: 335px;
         top: 450px;
+       }
+
+       #surfaceImageMars{
+        position: absolute;
+        width: 100px;
+        height: 120px;
+        left: 331px;
+        top: 450px;
+       }
+
+       #surfaceImageJupiter{
+        position: absolute;
+        width: 100px;
+        height: 120px;
+        left: 329px;
+        top: 445px;
+       }
+
+       #surfaceImageSaturn{
+        position: absolute;
+        width: 100px;
+        height: 120px;
+        left: 324px;
+        top: 445px;
+       }
+
+       #surfaceImageUranus{
+        position: absolute;
+        width: 100px;
+        height: 120px;
+        left: 324px;
+        top: 445px;  
+       }
+
+       #surfaceImageNeptune{
+        position: absolute;
+        width: 100px;
+        height: 120px;
+        left: 331px;
+        top: 445px;  
        }
 
 h1{
@@ -1095,7 +1394,6 @@ p{
             position: relative;
     }
 
-
 /* //////////////////MOBILE NAV//////////////////////     */
     nav{
         position: absolute;
@@ -1120,8 +1418,6 @@ p{
         text-transform: uppercase;        
         color: #FFFFFF;
     }
-
-   
 
     .topnav a.icon {
         float: right;
@@ -1149,9 +1445,6 @@ p{
       text-align: left;
     }
 /* //////////////////////////////////////////////////////////// */
-
-
-
     .mobile-topline{
         position: absolute;
         width: 375px;
@@ -1200,6 +1493,46 @@ p{
         top: 184px;
     }
 
+    .scaling-svg-container-mars{
+        position: absolute;
+        width: 129px;
+        height: 129px;
+        left: 122px;
+        top: 207px;
+    }
+
+    .scaling-svg-container-jupiter{
+        position: absolute;
+        width: 224px;
+        height: 224px;
+        left: 75px;
+        top: 159px;
+    }
+
+    .scaling-svg-container-saturn{
+        position: absolute;
+        width: 256px;
+        height: 256px;
+        left: 58px;
+        top: 144px;
+    }
+
+    .scaling-svg-container-uranus{
+        position: absolute;
+        width: 176px;
+        height: 176px;
+        left: 99px;
+        top: 183px;
+    }
+
+    .scaling-svg-container-neptune{
+        position: absolute;
+        width: 173px;
+        height: 173px;
+        left: 101px;
+        top: 184px;
+    }
+
     #surfaceImageVenus{
         position: absolute;
         top:290px;
@@ -1214,6 +1547,46 @@ p{
         left:157px;
         width: 60px;
         height: 75px;  
+    }
+
+    #surfaceImageMars{
+        position: absolute;
+        top:295px;
+        left:154px;
+        width: 60px;
+        height: 75px; 
+    }
+
+    #surfaceImageJupiter{
+        position: absolute;
+        top:295px;
+        left:153px;
+        width: 60px;
+        height: 75px;
+    }
+
+    #surfaceImageSaturn{
+        position: absolute;
+        top:295px;
+        left:150px;
+        width: 60px;
+        height: 75px;
+    }
+
+    #surfaceImageUranus{
+        position: absolute;
+        top:295px;
+        left:150px;
+        width: 60px;
+        height: 75px;
+    }
+
+    #surfaceImageNeptune{
+        position: absolute;
+        top:305px;
+        left:155px;
+        width: 60px;
+        height: 75px; 
     }
 
     .scaling-svg {
@@ -1355,7 +1728,7 @@ margin-left: 24px;
     }
 
     .rotation-h3{
-        width: 72px;
+        width: 100px;
         left: 231px;
         right: 24px;
         margin: 0;
