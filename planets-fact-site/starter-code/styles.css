@@ -27,16 +27,16 @@ h4{
 .topnav{
     position: absolute;
     width: 700px;
-    height: 25px;
+    height: 88px;
     left: 739px;
-    top: 33px;
+    top: 0px;
     mix-blend-mode: normal;    
+    word-spacing: 32px;
     overflow: hidden;
-}
+    }
 
 a{
-    float:left;
-    display:block;
+    display:inline-block;
     text-align: center;
     font-family: Spartan;
     font-style: normal;
@@ -46,9 +46,45 @@ a{
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #FFFFFF;
-    padding-left: 32px;
     opacity: 0.75;
     text-decoration: none;
+    height: 85px;
+    border-style: solid;
+    border-width: 5px 0 0 0;
+    padding-top:23px;
+    border-color:transparent;
+}
+
+#mercuryLink:hover{
+    border-color: rgb(65,158,187);
+}
+
+#venusLink:hover{
+    border-color: rgb(237,162,73);
+}
+
+#earthLink:hover{
+    border-color: rgb(109,46,213);
+}
+
+#marsLink:hover{
+    border-color:rgb(209,76,50);
+}
+
+#jupiterLink:hover{
+    border-color: rgb(216,58,52);
+}
+
+#saturnLink:hover{
+    border-color: rgb(205,81,32);
+}
+
+#uranusLink:hover{
+    border-color: rgb(30,193,162);
+}
+
+#neptuneLink:hover{
+    border-color: rgb(45,104,240);
 }
 
 a:hover{
@@ -127,13 +163,14 @@ p{
 }
 
 #wikiLink{
+    float: left;
+    display:block;
     text-decoration: underline; 
     font-weight: bold;
     text-transform: capitalize;
     position: absolute;
     height: 25px;
-    left: 0%;
-    right: 49%;
+    left: 65px;
     top: calc(50% - 25px/2);
     font-family: Spartan;
     font-style: normal;
@@ -142,7 +179,12 @@ p{
     line-height: 25px;
     color: #FFFFFF;
     mix-blend-mode: normal;
-    opacity: 1;    
+    opacity: 1;   
+    border-style: none;
+    border-width: 0;
+    padding-top:0;
+    border-color:transparent;
+        
 }
 
 #wikiFavicon{
@@ -823,11 +865,12 @@ img{
             text-align: left;
             margin:0;
             padding:0;
+            word-spacing: 2px;
        }
 
         a{
-            float:left;
-            display:block;
+            /* float:left; */
+            display:inline-block;
             font-family: Spartan;
             font-style: normal;
             font-weight: bold;
@@ -838,7 +881,9 @@ img{
             color: #FFFFFF;
             padding-left: 25px;
             opacity: 1;
-            text-decoration: none;         
+            text-decoration: none;   
+            border-width:0;      
+            padding-top: 10px;
                   }
 
         .mobile-topline{display: none;}
@@ -1386,7 +1431,7 @@ p{
 }
 
 /* Mobile portrait view */
-@media (max-width:375px){
+@media (min-width:375px){
 
     body{
             max-width: 375px;
@@ -1431,18 +1476,21 @@ p{
         left: 303px;
         top: 10px;        
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));      
+        overflow:visible;
     }
 
-    .topnav.responsive {position: absolute;}
+    .topnav.responsive{position: relative;}
     .topnav.responsive a.icon {
       position: absolute;
-      right: 0;
+      left: 0;
       top: 0;
+      
     }
     .topnav.responsive a {
       float: none;
       display: block;
       text-align: left;
+      
     }
 /* //////////////////////////////////////////////////////////// */
     .mobile-topline{
@@ -1917,12 +1965,11 @@ color: #FFFFFF;
     }
 
     .overview-button{
-
         position: absolute;
-        width: 80px;
-        height: 10px;
+        width: 95px;
+        height: 50px;
         left: 24px;
-        top: 89px;
+        top: 70px;
         font-family: Spartan;
         font-style: normal;
         font-weight: bold;
@@ -1932,15 +1979,18 @@ color: #FFFFFF;
         letter-spacing: 1.92857px;
         text-transform: uppercase;
         color: #FFFFFF;
-        border: none;
+        border-style: solid;
+        border-width:0 0 5px 0;
+        opacity: 0.5;
+        border-color: transparent;
     }
 
     .structure-button{
         position: absolute;
-        width: 80px;
-        height: 10px;
+        width: 100px;
+        height: 50px;
         left: 147px;
-        top: 89px;
+        top: 70px;
         font-family: Spartan;
         font-style: normal;
         font-weight: bold;
@@ -1951,17 +2001,19 @@ color: #FFFFFF;
         text-transform: uppercase;
         color: #FFFFFF;
         mix-blend-mode: normal;
-        opacity: 0.5;
-        border: none;
         text-align: left;
+        border-style: solid;
+        border-width:0 0 5px 0;
+        opacity: 0.5;
+        border-color: transparent;
     }
 
     .surface-button{
         position: absolute;
         width: 80px;
-        height: 10px;
+        height: 50px;
         left: 271px;
-        top: 89px;
+        top: 70px;
         font-family: Spartan;
         font-style: normal;
         font-weight: bold;
@@ -1973,8 +2025,154 @@ color: #FFFFFF;
         color: #FFFFFF;
         mix-blend-mode: normal;
         opacity: 0.5;
-        border: none;
+        border-style: solid;
+        border-width:0 0 5px 0;
+        border-color: transparent;
     }
+
+    .overview-button.active{
+        background-color: transparent;
+        border-color:rgb(65,158,187);
+        opacity: 1;
+    }
+
+    .structure-button.active{
+        background-color: transparent;
+        border-color:rgb(65,158,187);
+        opacity: 1;
+    }
+
+    .surface-button.active{
+        background-color: transparent;
+        border-color:rgb(65,158,187);
+        opacity: 1;
+    }
+
+    #venusoverviewButton.active{
+        background-color: transparent;
+        border-color:rgb(237,162,73);
+        opacity: 1; 
+    }
+
+    #venusstructureButton.active{
+        background-color: transparent;
+        border-color:rgb(237,162,73);
+        opacity: 1;   
+    }
+
+    #venussurfaceButton.active{
+        background-color: transparent;
+        border-color:rgb(237,162,73);
+        opacity: 1;  
+    }
+
+    #earthoverviewButton.active{
+        background-color: transparent;
+        border-color:rgb(109,46,213);
+        opacity: 1; 
+    }
+
+    #earthstructureButton.active{
+        background-color: transparent;
+        border-color:rgb(109,46,213);
+        opacity: 1; 
+    }
+
+    #earthsurfaceButton.active{
+        background-color: transparent;
+        border-color:rgb(109,46,213);
+        opacity: 1; 
+    }
+
+    #marsoverviewButton.active{
+        background-color: transparent;
+        border-color:rgb(209,76,50);
+        opacity: 1;   
+    }
+
+    #marsstructureButton.active{
+        background-color: transparent;
+        border-color:rgb(209,76,50);
+        opacity: 1;  
+    }
+
+    #marssurfaceButton.active{
+        background-color: transparent;
+        border-color:rgb(209,76,50);
+        opacity: 1; 
+    }
+
+    #jupiteroverviewButton.active{
+        background-color: transparent;
+        border-color:rgb(216,58,52);
+        opacity: 1;
+    }
+
+    #jupiterstructureButton.active{
+        background-color: transparent;
+        border-color:rgb(216,58,52);
+        opacity: 1;  
+    }
+
+    #jupitersurfaceButton.active{
+        background-color: transparent;
+        border-color:rgb(216,58,52);
+        opacity: 1;
+    }
+
+    #saturnoverviewButton.active{
+        background-color: transparent;
+        border-color:rgb(205,81,32);
+        opacity: 1;
+    }
+
+    #saturnstructureButton.active{
+        background-color: transparent;
+        border-color:rgb(205,81,32);
+        opacity: 1;   
+    }
+
+    #saturnsurfaceButton.active{
+        background-color: transparent;
+        border-color:rgb(205,81,32);
+        opacity: 1; 
+    }
+
+    #uranusoverviewButton.active{
+        background-color: transparent;
+        border-color:rgb(30,193,162);
+        opacity: 1; 
+    }
+
+    #uranusstructureButton.active{
+        background-color: transparent;
+        border-color:rgb(30,193,162);
+        opacity: 1; 
+    }
+
+    #uranussurfaceButton.active{
+        background-color: transparent;
+        border-color:rgb(30,193,162);
+        opacity: 1; 
+    }
+
+    #neptuneoverviewButton.active{
+        background-color: transparent;
+        border-color:rgb(45,104,240);
+        opacity: 1;  
+    }
+
+#neptunestructureButton.active{
+    background-color: transparent;
+    border-color:rgb(45,104,240);
+    opacity: 1;  
+}
+
+#neptunesurfaceButton.active{
+    background-color: transparent;
+    border-color:rgb(45,104,240);
+    opacity: 1; 
+}
 
     .overview-number{
         display: none;
