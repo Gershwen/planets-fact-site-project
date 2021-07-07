@@ -1,26 +1,22 @@
-// NavBar button
+// NavBar button function
 
-function myFunction(){
+const toggleButton = document.getElementsByClassName('toggle-button')[0];
+const navbarLinks = document.getElementsByClassName('navbar-links')[0];
 
-    var x = document.getElementById("myTopnav");
+toggleButton.addEventListener('click', ()=>{
 
-    if(x.className === "topnav"){
-        x.className += " responsive";
-    } else{
-        x.className = "topnav";
-    }
+    navbarLinks.classList.toggle('active');
 
-}
+});
 
 // Buttons
 
 // When clicking on a button it should change its color 
+
 $("button").click(function() {
     $("button").removeClass("active");
     $(this).addClass("active");
  });
-
-
 
 // Mercury
 

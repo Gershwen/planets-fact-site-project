@@ -1,42 +1,81 @@
-body{
+* {
+    box-sizing: border-box;
+}
+
+body{ 
+
     position: relative;
     width: 1440px;
     height: 1024px;    
     background: #070724;
     margin: 0;
     background-image:url("background-stars.svg");
+    padding:0;
+
 }
-/* The Planets */
-h4{
+
+.background-svg{
+
     position: absolute;
-    width: 109px;
-    height: 36px;
-    left: 32px;
-    top: 22px;    
-    font-family: Antonio;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 28px;
-    line-height: 36px;
-    letter-spacing: -1.05px;
-    text-transform: uppercase;    
-    color: #FFFFFF;
-    margin-top: 0;    
+
 }
-/* Navbar desktop start */
-.topnav{
-    position: absolute;
-    width: 700px;
+
+/*//////////////////////// Navbar desktop start///////////////////////////////////////////////// */
+
+.navbar {
+
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
     height: 88px;
-    left: 739px;
-    top: 0px;
-    mix-blend-mode: normal;    
-    word-spacing: 32px;
-    overflow: hidden;
+
     }
 
-a{
-    display:inline-block;
+    .navbar-svg {
+
+        display: none;
+
+    }
+
+    .navbar-arrow {
+
+        display: none;
+
+    }
+
+    .brand-title {
+
+        width: 109px;
+        height: 36px;
+        font-family: Antonio;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: -1.05px;
+        text-transform: uppercase;    
+        color: #FFFFFF;
+        margin: .5rem 2rem;  
+        
+    }
+
+    .navbar-links ul {
+
+        display: flex;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .navbar-links li {
+
+        list-style: none;
+
+    }
+
+.navbar-links li a {
+
+    display:block;
     text-align: center;
     font-family: Spartan;
     font-style: normal;
@@ -46,73 +85,118 @@ a{
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #FFFFFF;
-    opacity: 0.75;
     text-decoration: none;
     height: 85px;
     border-style: solid;
     border-width: 5px 0 0 0;
     padding-top:23px;
     border-color:transparent;
+    width: 67px;
+    margin:0;
+    opacity: 0.75;  
+
 }
 
-#mercuryLink:hover{
-    border-color: rgb(65,158,187);
-}
+.toggle-button {
 
-#venusLink:hover{
-    border-color: rgb(237,162,73);
-}
-
-#earthLink:hover{
-    border-color: rgb(109,46,213);
-}
-
-#marsLink:hover{
-    border-color:rgb(209,76,50);
-}
-
-#jupiterLink:hover{
-    border-color: rgb(216,58,52);
-}
-
-#saturnLink:hover{
-    border-color: rgb(205,81,32);
-}
-
-#uranusLink:hover{
-    border-color: rgb(30,193,162);
-}
-
-#neptuneLink:hover{
-    border-color: rgb(45,104,240);
-}
-
-a:hover{
-color: #FFFFFF;
-opacity: 1;
-}
-
-.topnav .icon{display:none;}
-/* Navbar desktop end */
-.top-line{
     position: absolute;
-    width: 1440px;
+    display:none;
+    width: 24px;
+    height: 17px;
+    top: .75rem;
+    right: 1rem;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+#mercuryLink:hover {
+
+    border-color: rgb(65,158,187);
+
+}
+
+#venusLink:hover {
+
+    border-color: rgb(237,162,73);
+
+}
+
+#earthLink:hover {
+
+    border-color: rgb(109,46,213);
+
+}
+
+#marsLink:hover {
+
+    border-color:rgb(209,76,50);
+
+}
+
+#jupiterLink:hover {
+
+    border-color: rgb(216,58,52);
+
+}
+
+#saturnLink:hover {
+
+    border-color: rgb(205,81,32);
+
+}
+
+#uranusLink:hover {
+
+    border-color: rgb(30,193,162);
+
+}
+
+#neptuneLink:hover {
+
+    border-color: rgb(45,104,240);
+
+}
+
+.navbar-links a:hover { 
+
+    color: #FFFFFF;
+    opacity: 1;
+
+}
+
+
+/* Navbar desktop end */
+
+.top-line {
+
+    width: 100%;
     height: 1px;
-    left: 0px;
-    top: 85px;
     background: #FFFFFF;
     mix-blend-mode: normal;
     opacity: 0.2;
+
 }
 
-.mobile-topline{display: none;}
+.mobile-topline {display: none;}
 
-h1{
+.container{
+
     position: absolute;
-    width: 263px;
-    height: 104px;
+    display: flex;
+    justify-content: flex-start;
+    height: 325px;
+    width: 350px;
     left: 925px;
     top: 212px;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+h1 {
+
     font-family: Antonio;
     font-style: normal;
     font-weight: normal;
@@ -121,14 +205,11 @@ h1{
     text-transform: uppercase;
     color: #FFFFFF;
     margin:0;
+
 }
 
-p{
-    position: absolute;
-    width: 350px;
-    height: 150px;
-    left: 925px;
-    top: 339px;
+p {
+
     font-family: Spartan;
     font-style: normal;
     font-weight: normal;
@@ -136,42 +217,26 @@ p{
     line-height: 25px;
     color: #FFFFFF;
     margin:0;
+
 }
 
-.wikilink-box{
-    position: absolute;
+/* Wikilink styling */
+
+.wikilink-box {
+
     width: 164px;
     height: 25px;
-    left: 925px;
-    top: 512px;
+
 }
 
-.wikilink{
-    position: absolute;
-    height: 25px;
-    left: 0%;
-    right: 12.2%;
-    top: calc(50% - 25px/2);
-    font-family: Spartan;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 25px;
-    color: #FFFFFF;
-    mix-blend-mode: normal;
-    opacity: 0.5;
-}
+.wikilink {
 
-#wikiLink{
     float: left;
     display:block;
-    text-decoration: underline; 
     font-weight: bold;
     text-transform: capitalize;
-    position: absolute;
     height: 25px;
     left: 65px;
-    top: calc(50% - 25px/2);
     font-family: Spartan;
     font-style: normal;
     font-weight: normal;
@@ -181,22 +246,17 @@ p{
     mix-blend-mode: normal;
     opacity: 1;   
     border-style: none;
-    border-width: 0;
-    padding-top:0;
+    border-width: 0;    
     border-color:transparent;
         
 }
 
-#wikiFavicon{
-    opacity: 1;
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    left: 155px;
-    top: 6px;
-}
+/* //////////////////////////// */
 
-.scaling-svg-container{
+/* Each planet's SVG styles */
+
+.scaling-svg-container {
+
     position: absolute;
     width: 290px;
     height: 290px;
@@ -204,47 +264,58 @@ p{
     top: 328px;
 }
 
-.scaling-svg-container-venus{
+.scaling-svg-container-venus {
+
     position: absolute;
     width: 400px;
     height: 400px;
     left: 280px;
     top: 273px;
+
 }
 
-.scaling-svg-container-earth{
+.scaling-svg-container-earth {
+
     position: absolute;
     width: 450px;
     height: 450px;
     left: 255px;
     top: 248px;
+
 }
 
-.scaling-svg-container-mars{
+.scaling-svg-container-mars {
+
     position: absolute;
     width: 336px;
     height: 336px;
     left: 312px;
     top: 305px;
+
 }
 
-.scaling-svg-container-jupiter{
+.scaling-svg-container-jupiter {
+    
     position: absolute;
     width: 582px;
     height: 582px;
     left: 189px;
     top: 182px;
+
 }
 
-.scaling-svg-container-saturn{
+.scaling-svg-container-saturn {
+
     position: absolute;
     width: 666.09px;
     height: 666.09px;
     left: 146.95px;
     top: 155.95px;
+
 }
 
-.scaling-svg-container-uranus{
+.scaling-svg-container-uranus {
+
     position: absolute;
     width: 458px;
     height: 458px;
@@ -252,31 +323,37 @@ p{
     top: 244px;
 }
 
-.scaling-svg-container-neptune{
+.scaling-svg-container-neptune {
+
     position: absolute;
     width: 450px;
     height: 450px;
     left: 255px;
     top: 248px;
+
 }
 
 .scaling-svg {
+
     position: absolute; 
     height: 100%; 
     width: 100%; 
     left: 0; 
     top: 0;
+
    }
 
-img{
+img {
+
     position: absolute;
     width: 163px;
     height: 199px;
     left: 394px;
     top: 554px;
+
 }
 
-#surfaceImageVenus{
+#surfaceImageVenus {
 
     position: absolute;
     width: 163px;
@@ -286,20 +363,24 @@ img{
 
 }
 
-#surfaceImageEarth{
+#surfaceImageEarth {
+
     position: absolute;
     width: 163px;
     height: 199px;
     left: 399px;
     top: 554px;
+
 }
 
-#surfaceImageMars{
+#surfaceImageMars {
+
     position: absolute;
     width: 163px;
     height: 199px;
     left: 392px;
     top: 554px;
+
 }
 
 #surfaceImageJupiter{
@@ -326,17 +407,22 @@ img{
     top: 534px;
 }
 
-#surfaceImageNeptune{
+#surfaceImageNeptune {
+
     position: absolute;
     width: 163px;
     height: 199px;
     left: 393px;
     top: 554px;
+
 }
+
+/* ///////////////////////////////// */
 
 /* Buttons start (Desktop view) */
 /* Mercury */
-.overview-button{  
+.overview-button {  
+
     left: 925px;
     top: 577px;
     position: absolute;  
@@ -347,10 +433,13 @@ img{
     border-color: #838391;
     border-width: 1px;
     border-style: solid;
+
 }
 
-.overview-button:hover{
-    background: rgb(56,56,79)!important;
+Button:hover {
+
+    background: rgb(56,56,79);
+
   }
 
   .overview-button.active{
@@ -358,7 +447,8 @@ img{
   }
 
 
-.overview-number{
+.overview-number {
+
     position: absolute;
     height: 25px;
     left: 8%;
@@ -375,6 +465,7 @@ img{
     mix-blend-mode: normal;
     opacity: 0.5;
     margin:0;
+
 }
 
 .overview-text{
@@ -411,10 +502,6 @@ img{
 .structure-button.active{
     background-color: rgb(65,158,187);
 }
-
-.structure-button:hover{
-    background: rgb(56,56,79)!important;
-    }
 
 .structure-number{
     position: absolute;
@@ -456,8 +543,10 @@ img{
     visibility: hidden;
     }
 
-    #surfaceImageVenus{
+    #surfaceImageVenus {
+
         visibility: hidden;
+
     }
 
 .surface-button{
@@ -471,10 +560,6 @@ img{
     border-width: 1px;
     background-color: transparent;
     padding:0;
-}
-
-.surface-button:hover{
-    background: rgb(56,56,79)!important;
 }
 
 .surface-button.active{
@@ -636,10 +721,17 @@ img{
             background-color: rgb(45,104,240);   
         }  
 
+
 /* Buttons end (Desktop view) */
 
-.rotation-box{
+/* Stats boxes start */
+.rotation-box {
+
+    display: flex;
+    justify-content: flex-start;
+    justify-content: space-between;
     position: absolute;
+    flex-direction: column;
     width: 255px;
     height: 128px;
     left: 165px;
@@ -647,10 +739,17 @@ img{
     border-style: solid;
     border-color: #838391;
     border-width: 1px;
+    padding: 1.5rem;
+
 }
 
-.revolution-box{
+.revolution-box {
+
+    display: flex;
+    justify-content: flex-start;
+    justify-content: space-between;
     position: absolute;
+    flex-direction: column;
     width: 255px;
     height: 128px;
     left: 450px;
@@ -658,10 +757,17 @@ img{
     border-style: solid;
     border-color: #838391;
     border-width: 1px;
+    padding: 1.5rem;
+
 }
 
-.radius-box{
+.radius-box {
+
+    display: flex;
+    justify-content: flex-start;
+    justify-content: space-between;
     position: absolute;
+    flex-direction: column;
     width: 255px;
     height: 128px;
     left: 735px;
@@ -669,10 +775,17 @@ img{
     border-style: solid;
     border-color: #838391;
     border-width: 1px;
+    padding: 1.5rem;
+
 }
 
-.temp-box{
+.temp-box {
+
+    display: flex;
+    justify-content: flex-start;
+    justify-content: space-between;
     position: absolute;
+    flex-direction: column;
     width: 255px;
     height: 128px;
     left: 1020px;
@@ -680,15 +793,14 @@ img{
     border-style: solid;
     border-color: #838391;
     border-width: 1px;
+    padding: 1.5rem;
 
 }
 
-.rotation-p{
-    position: absolute;
+.box-p {
+
     height: 25px;
-    left: 9.02%;
-    right: 48.24%;
-    top: calc(50% - 25px/2 - 31.5px);
+    width: 100%;
     font-family: Spartan;
     font-style: normal;
     font-weight: bold;
@@ -702,12 +814,9 @@ img{
     margin:0;
 }
 
-.rotation-h3{
-    position: absolute;
+.box-h3 {
+
     height: 52px;
-    left: 9.02%;
-    right: 40.78%;
-    top: calc(50% - 52px/2 + 11px);
     font-family: Antonio;
     font-style: normal;
     font-weight: normal;
@@ -717,197 +826,75 @@ img{
     text-transform: uppercase;
     color: #FFFFFF;
     margin:0;
-    width:200px;
+    width:100%;
+
 }
 
-.revolution-p{
-    position: absolute;
-    height: 25px;
-    left: 9.02%;
-    right: 40.78%;
-    top: calc(50% - 25px/2 - 31.5px);
-    font-family: Spartan;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 11px;
-    line-height: 25px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    mix-blend-mode: normal;
-    opacity: 0.5;
-    margin:0;
-}
-
-.revolution-h3{
-    position: absolute;
-    height: 52px;
-    left: 9.02%;
-    right: 36.08%;
-    top: calc(50% - 52px/2 + 11px);
-    font-family: Antonio;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 40px;
-    line-height: 52px;
-    letter-spacing: -1.5px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    margin:0;
-    width: 200px;
-}
-
-.radius-p{
-    position: absolute;
-    height: 25px;
-    left: 9.02%;
-    right: 70.59%;
-    top: calc(50% - 25px/2 - 31.5px);
-    font-family: Spartan;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 11px;
-    line-height: 25px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    mix-blend-mode: normal;
-    opacity: 0.5;
-    margin:0;
-}
-
-.radius-h3{
-    position: absolute;
-    height: 52px;
-    left: 9.02%;
-    right: 34.51%;
-    top: calc(50% - 52px/2 + 11px);
-    font-family: Antonio;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 40px;
-    line-height: 52px;
-    letter-spacing: -1.5px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    margin:0;
-}
-
-.temp-p{
-    position: absolute;
-    height: 25px;
-    left: 9.02%;
-    right: 47.06%;
-    top: calc(50% - 25px/2 - 31.5px);
-    font-family: Spartan;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 11px;
-    line-height: 25px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    mix-blend-mode: normal;
-    opacity: 0.5;
-    margin:0;
-}
-
-.temp-h3{
-    position: absolute;
-    height: 52px;
-    left: 9.02%;
-    right: 58.82%;
-    top: calc(50% - 52px/2 + 11px);
-    font-family: Antonio;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 40px;
-    line-height: 52px;
-    letter-spacing: -1.5px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    margin:0;
-}
+/* Stats boxes end */
 
 /* Tablet view */
 @media (max-width:768px){
 
-    body{        
-        position: relative;
+    body{     
+
         width: 768px;
         height: 1024px;        
-        background: #070724;
+
         }
 
-        h4{
-            position: absolute;
-            width: 109px;
-            height: 36px;
-            left: 330px;
-            top: 32px;
-            font-family: Antonio;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 28px;
-            line-height: 36px;
-            letter-spacing: -1.05px;
-            text-transform: uppercase;
-            color: #FFFFFF;
+        .navbar{
+
+            flex-direction: column;
+            height: 159px;
+
+
         }
 
-        .topnav{
-            position: absolute;
-            width: 695px;
-            height: 25px;
-            left: 51px;
-            top: 107px;
-            mix-blend-mode: normal;
-            text-align: left;
-            margin:0;
-            padding:0;
-            word-spacing: 2px;
-       }
+        .navbar-svg {
 
-        a{
-            /* float:left; */
-            display:inline-block;
-            font-family: Spartan;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 11px;
-            line-height: 25px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: #FFFFFF;
-            padding-left: 25px;
-            opacity: 1;
-            text-decoration: none;   
-            border-width:0;      
-            padding-top: 10px;
-                  }
-
-        .mobile-topline{display: none;}
-
-    .top-line{
-        position: absolute;
-        width: 768px;
-        height: 1px;
-        left: 0px;
-        top: 159px;
-        background: #FFFFFF;
-        mix-blend-mode: normal;
-        opacity: 0.2;
-    }
+            display: none;
     
-    .scaling-svg-container{
+        }
+
+        .navbar-arrow {
+
+            display: none;
+    
+        }
+
+        .brand-title{
+
+            padding-top: 1.5rem;
+
+        }
+
+        .navbar-links{
+            
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            
+
+        }
+
+        .navbar-links ul{
+            
+            justify-content: space-between;
+            width: 90%;
+
+        }
+    
+    .scaling-svg-container {
+
         position: absolute;
         width: 184px;
         height: 184px;
         left: 293px;
         top: 306px;
+
        }
 
-       .scaling-svg-container-venus{
+       .scaling-svg-container-venus {
 
         position: absolute;
         width: 253px;
@@ -917,7 +904,8 @@ img{
 
        }
 
-       .scaling-svg-container-earth{
+       .scaling-svg-container-earth {
+
         position: absolute;
         width: 285px;
         height: 285px;
@@ -976,11 +964,13 @@ img{
        }
 
        img{
+
         position: absolute;
         width: 100px;
         height: 120px;
         left: 333px;
         top: 430px;
+
        }
 
        #surfaceImageVenus{
@@ -1034,101 +1024,62 @@ img{
         top: 445px;  
        }
 
-       #surfaceImageNeptune{
+       #surfaceImageNeptune {
+
         position: absolute;
         width: 100px;
         height: 120px;
         left: 331px;
         top: 445px;  
+
        }
 
-h1{
-    position: absolute;
-    height: 62px;
-    left: 39px;
-    right: 53.39%;
-    top: 621px;
-    font-family: Antonio;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 48px;
-    line-height: 62px;
-    text-transform: uppercase;
-    color: #FFFFFF;
+       .container {
+
+        height: 253px;
+        width: 339px;
+        left: 39px;
+        top: 620px;
+        
     }
 
-p{
-    position: absolute;
-    height: 110px;
-    left: 39px;
-    right: 0%;
-    top: 706px;
-    font-family: Spartan;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 11px;
-    line-height: 22px;
-    color: #FFFFFF;
+    h1 {
+
+        font-size: 48px;
+        line-height: 62px;
+
+    }
+
+    p {
+
+        font-size: 11px;
+        line-height: 22px;
+
+    }
+
+.wikilink-box {
+ 
+    width: 100%;
+    height: 25px;
+
 }
 
-.wikilink-box{
-    position: absolute;
-    width: 139px;
-    height: 25px;
-    left: 39px;
-    top: 848px;
-}
-
-.wikilink{
-    position: absolute;
-    height: 25px;
-    left: 0%;
-    right: 11.51%;
-    top: calc(50% - 25px/2);    
-    font-family: Spartan;
-    font-style: normal;
-    font-weight: normal;
+.wikilink {
+    
+    width: 100%;
     font-size: 12px;
-    line-height: 25px;
-    color: #FFFFFF;    
-    mix-blend-mode: normal;
-    opacity: 0.5;
+
 }
 
-#wikiLink{
-    position: absolute;
-    height: 25px;
-    left: 0%;
-    right: 11.51%;
-    top: calc(50% - 25px/2);    
-    font-family: Spartan;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 25px;
-    color: #FFFFFF;    
-    mix-blend-mode: normal;
-    padding:0;
-    width:200px;
-    text-decoration: underline ; 
-    font-weight: bold;
-}
 
-#wikiFavicon{
-    opacity: 1;
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    left: 142px;
-    top: 6px;
-}
+.overview-button {
 
-.overview-button{
     position: absolute;
     width: 281px;
     height: 40px;
     left: 447px;
     top: 676px;
+
 }
 
 .overview-number{
@@ -1234,7 +1185,8 @@ p{
     opacity: 0.5;
 }
 
-.surface-text{
+.surface-text {
+
     position: absolute;
     height: 25px;
     left: 17.79%;
@@ -1251,7 +1203,8 @@ p{
     width: 134px;
 }
 
-.rotation-box{
+.rotation-box {
+
     position: absolute;
     width: 164px;
     height: 88px;
@@ -1259,7 +1212,8 @@ p{
     top: 900px;
 }
 
-.revolution-box{
+.revolution-box {
+
     position: absolute;
     width: 164px;
     height: 88px;
@@ -1268,7 +1222,8 @@ p{
 
 }
 
-.radius-box{
+.radius-box {
+
     position: absolute;
     width: 164px;
     height: 88px;
@@ -1276,7 +1231,8 @@ p{
     top: 900px;
 }
 
-.temp-box{
+.temp-box {
+
     position: absolute;
     width: 164px;
     height: 88px;
@@ -1284,148 +1240,21 @@ p{
     top: 900px;
 }
 
-.rotation-p{
-    position: absolute;
-    height: 16px;
-    left: 0%;
-    right: 0%;
-    top: calc(50% - 16px/2 - 18.5px);
-    margin-left: 10px;
-    font-family: Spartan;
-    font-style: normal;
-    font-weight: bold;
+.box-p {
+
     font-size: 8px;
     line-height: 16px;
     letter-spacing: 0.727273px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    mix-blend-mode: normal;
-    opacity: 0.5;
+
 }
 
-.rotation-h3{
-    position: absolute;
+.box-h3 {
+   
     height: 31px;
-    left: 0%;
-    right: 3.75%;
-    top: calc(50% - 31px/2 + 11px);
-    margin-left: 10px;
-    font-family: Antonio;
-    font-style: normal;
-    font-weight: normal;
     font-size: 24px;
     line-height: 31px;
     letter-spacing: -0.9px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-}
 
-.revolution-p{
-    position: absolute;
-    height: 16px;
-    left: 0%;
-    right: 1.06%;
-    top: calc(50% - 16px/2 - 18.5px);
-    margin-left: 10px;
-    font-family: Spartan;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 8px;
-    line-height: 16px; 
-    letter-spacing: 0.727273px;
-    text-transform: uppercase;    
-    color: #FFFFFF;    
-    mix-blend-mode: normal;
-    opacity: 0.5;  
-   }
-
-.revolution-h3{
-    position: absolute;
-    height: 31px;
-    left: 0%;
-    right: 10.64%;
-    top: calc(50% - 31px/2 + 11px);
-    margin-left: 10px;
-    font-family: Antonio;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 31px;
-    letter-spacing: -0.9px;
-    text-transform: uppercase;  
-    color: #FFFFFF;    
-}
-
-.radius-p{
-    position: absolute;
-    height: 16px;
-    left: 0%;
-    right: 55.29%;
-    top: calc(50% - 16px/2 - 18.5px);
-    margin-left: 10px;
-    font-family: Spartan;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 8px;
-    line-height: 16px;    
-    letter-spacing: 0.727273px;
-    text-transform: uppercase;    
-    color: #FFFFFF;    
-    mix-blend-mode: normal;
-    opacity: 0.5;
-    }
-
-.radius-h3{
-    position: absolute;
-    height: 31px;
-    left: 0%;
-    right: -1.18%;
-    top: calc(50% - 31px/2 + 11px);
-    margin-left: 10px;
-    font-family: Antonio;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 31px;    
-    letter-spacing: -0.9px;
-    text-transform: uppercase;    
-    color: #FFFFFF;
-    }
-
-.temp-p{
-    position: absolute;
-    height: 16px;
-    left: 0%;
-    right: 35.94%;
-    top: calc(50% - 16px/2 - 18.5px);
-    margin-left: 10px;
-    font-family: Spartan;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 8px;
-    line-height: 16px;
-    letter-spacing: 0.727273px;
-    text-transform: uppercase;    
-    color: #FFFFFF;    
-    mix-blend-mode: normal;
-    opacity: 0.5;
-}
-
-.temp-h3{
-    position: absolute;
-    height: 31px;
-    left: 0%;
-    right: 0%;
-    top: calc(50% - 31px/2 + 11px);
-    font-family: Antonio;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 31px;    
-    letter-spacing: -0.9px;
-    text-transform: uppercase;    
-    color: #FFFFFF;
-    margin-left: 10px;
 }
 
 }
@@ -1440,60 +1269,121 @@ p{
     }
 
 /* //////////////////MOBILE NAV//////////////////////     */
-    nav{
+
+    .toggle-button {
+
+        display:flex;
+
+    }
+
+    .navbar-links {
+
+        display:none; 
+        width: 100%; 
         position: absolute;
+        height: 487px;
+        left: 0;
+        top: 70px;
+
+    }
+
+    .navbar-svg {
+
+       display: flex;
+       margin-right: 25px;
+        
+    }
+
+    .navbar-arrow {
+
+        display: flex;
+        margin-right: 32px;
+        position: absolute;
+        left: 339px;
+
+    }
+
+
+    .navbar {
+
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 24px;
         width: 327px;
         height: 36px;
-        left: 24px;
-        top: 16px;
+        margin-top: 16px;
+
+
     }
 
-    h4{
-        position: absolute;
-        height: 36px;
-        left: 0%;
-        right: 66.67%;
-        top: calc(50% - 36px/2);        
-        font-family: Antonio;
-        font-style: normal;
-        font-weight: normal;
+    .brand-title {
+
         font-size: 28px;
         line-height: 36px;
-        letter-spacing: -1.05px;
-        text-transform: uppercase;        
-        color: #FFFFFF;
+        padding: 0;
+        margin:0;        
     }
 
-    .topnav a.icon {
-        float: right;
-        display: block;
-      }
+    .navbar-links ul {
 
-    .topnav{
-        position: absolute;
-        width: 24px;
-        height: 17px;
-        left: 303px;
-        top: 10px;        
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));      
-        overflow:visible;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgb(7,7,36);
+        z-index: 1;
+   
     }
 
-    .topnav.responsive{position: relative;}
-    .topnav.responsive a.icon {
-      position: absolute;
-      left: 0;
-      top: 0;
-      
+    .navbar-links li{
+
+        height: 65px;
+        width: 100%;
+        padding-left: 24px;
+
     }
-    .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-      
+
+    .navbar-links li a {
+
+        display: flex;
+        height: 100%;
+        width: 327px; 
+        border-bottom: 1px;
+        border-style: solid;
+        border-color: rgb(56, 56, 79);
+        border-top: 0;
+        letter-spacing: 1.36364px;
+        font-size: 15px;
+        line-height: 25px;
+        padding:0;
+        opacity:1;
+        justify-content: space-between;
+        align-items: center;
+        justify-content: flex-start;
+
     }
+
+    .navbar-links li a:hover {
+
+        border-color: rgb(56, 56, 79)!important;
+
+    }
+
+    #neptuneLink{
+
+        border-bottom: 0;
+
+    }
+
+
+    .navbar-links.active {
+
+        display: flex;
+
+    }
+    
 /* //////////////////////////////////////////////////////////// */
-    .mobile-topline{
+
+    .mobile-topline {
+
         position: absolute;
         width: 375px;
         height: 1px;
@@ -1503,9 +1393,11 @@ p{
         mix-blend-mode: normal;
         opacity: 0.2;
         display: block;
+
     }
 
-    .top-line{
+    .top-line {
+
         position: absolute;
         width: 375px;
         height: 1px;
@@ -1514,6 +1406,7 @@ p{
         background: #FFFFFF;
         mix-blend-mode: normal;
         opacity: 0.2;
+
         }
 
     /* mobile svg scaling start*/
@@ -1589,7 +1482,8 @@ p{
         height: 75px;   
     }
 
-    #surfaceImageEarth{
+    #surfaceImageEarth {
+
         position: absolute;
         top:305px;
         left:157px;
@@ -1605,23 +1499,17 @@ p{
         height: 75px; 
     }
 
-    #surfaceImageJupiter{
+    #surfaceImageJupiter {
+
         position: absolute;
         top:295px;
-        left:153px;
+        left:145px;
         width: 60px;
         height: 75px;
     }
 
-    #surfaceImageSaturn{
-        position: absolute;
-        top:295px;
-        left:150px;
-        width: 60px;
-        height: 75px;
-    }
+    #surfaceImageSaturn {
 
-    #surfaceImageUranus{
         position: absolute;
         top:295px;
         left:150px;
@@ -1629,12 +1517,23 @@ p{
         height: 75px;
     }
 
-    #surfaceImageNeptune{
+    #surfaceImageUranus {
+
+        position: absolute;
+        top:295px;
+        left:150px;
+        width: 60px;
+        height: 75px;
+    }
+
+    #surfaceImageNeptune {
+
         position: absolute;
         top:305px;
-        left:155px;
+        left:156px;
         width: 60px;
         height: 75px; 
+
     }
 
     .scaling-svg {
@@ -1646,325 +1545,125 @@ p{
        }
  /* mobile svg scaling end*/
 
- img{
+ img {
+
      position: absolute;
      top:290px;
      left:156px;
      width: 60px;
      height: 75px;
+
  }
 
- main{
-    position: absolute;
+.container {
+
+    text-align: center;
     width: 327px;
     height: 235px;
     left: 24px;
     top: 424px;
-    text-align: center;
- }
 
-    h1{
+}
 
-        position: absolute;
-        height: 52px;
-        left: 29.82%;
-        right: 29.82%;
-        top: calc(50% - 52px/2 - 91.5px);        
-        font-family: Antonio;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 40px;
-        line-height: 52px;      
-        text-align: center;
-        text-transform: uppercase;        
-        color: #FFFFFF;
-        width:132px;
+h1 {
+
+    font-size: 40px;
+    line-height: 52px;
+
+}
+
+p {
         
-    }
-
-    p{
-
-        position: absolute;
-        height: 110px;
-        left: 0%;
-        right: 0%;
-        top: calc(50% - 110px/2 + 5.5px);
-        font-family: Spartan;
-        font-style: normal;
-        font-weight: normal;
         font-size: 11px;
         line-height: 22px;
+
+    }
+
+    .wikilink-box {
+
         text-align: center;
-        color: #FFFFFF;
-        width:327px;
-
-    }
-
-    .wikilink-box{
-
-        position: absolute;
-        left: 26.44%;
-        right: 29.05%;
-        top: 89.36%;
-        bottom: 0%;
-
-    }
-
-    .wikilink{
-        position: absolute;
         height: 25px;
-        left: 0%;
-        right: 30%;
-        top: calc(50% - 25px/2);        
-        font-family: Spartan;
-        font-style: normal;
-        font-weight: normal;
+        width: 100%;
+
+    }
+
+    .wikilink {
+
         font-size: 12px;
-        line-height: 25px;      
-        color: #FFFFFF;        
-        mix-blend-mode: normal;
-        opacity: 0.5;
-        width:60px;
-    }
-
-    #wikiLink{
-
-        position: absolute;
-        height: 25px;
-        left: 0%;
-        right: 11.51%;
-        top: calc(50% - 25px/2);        
-        font-family: Spartan;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 12px;
-        line-height: 25px;      
-        color: #FFFFFF;        
-        mix-blend-mode: normal;
-        opacity: 1;
+        line-height: 25px;
+        width: 100%;
 
     }
 
-    .rotation-box{
+    .rotation-box {
+
+        flex-direction: row; 
         position: absolute;
-width: 327px;
-height: 48px;
-left: 24px;
-top: 687px;
-    }
-
-    .rotation-p{
-        text-align: left;
-        position: absolute;
-height: 16px;
-left:0;
-right: 71.33%;
-top: calc(50% - 16px/2 + 2px);
-width: 100px;
-font-family: Spartan;
-font-style: normal;
-font-weight: bold;
-font-size: 8px;
-line-height: 16px;
-/* identical to box height, or 200% */
-letter-spacing: 0.727273px;
-text-transform: uppercase;
-color: #FFFFFF;
-mix-blend-mode: normal;
-opacity: 0.5;
-margin-left: 24px;
-    }
-
-    .rotation-h3{
-        width: 100px;
-        left: 231px;
-        right: 24px;
-        margin: 0;
-        text-align: left;
-
-        position: absolute;
-height: 26px;
-top: calc(50% - 26px/2);
-
-font-family: Antonio;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 26px;
-/* identical to box height */
-letter-spacing: -0.75px;
-text-transform: uppercase;
-color: #FFFFFF;
-    }
-
-    .revolution-box{
-        position: absolute;
-width: 327px;
-height: 48px;
-left: 24px;
-top: 743px;
-    }
-
-    .revolution-p{
-        margin-left: 24px;
-        text-align: left;
-width: 100px;
-        position: absolute;
-height: 16px;
-left: 0%;
-right: 66.67%;
-top: calc(50% - 16px/2 + 2px);
-
-font-family: Spartan;
-font-style: normal;
-font-weight: bold;
-font-size: 8px;
-line-height: 16px;
-/* identical to box height, or 200% */
-
-letter-spacing: 0.727273px;
-text-transform: uppercase;
-
-color: #FFFFFF;
-
-mix-blend-mode: normal;
-opacity: 0.5;
+        width: 327px;
+        height: 48px;
+        left: 24px;
+        top: 687px;
+        padding: 9px 24px 13px;
 
     }
 
-    .revolution-h3{
-        width: 72px;
-        left: 231px;
-        right: 24px;
-        margin: 0;
-        text-align: left;
+    .revolution-box {
+        
+        flex-direction: row; 
         position: absolute;
-        height: 26px;
-        top: calc(50% - 26px/2);
-        font-family: Antonio;
-        font-style: normal;
-        font-weight: normal;
+        width: 327px;
+        height: 48px;
+        left: 24px;
+        top: 743px;
+        padding: 9px 24px 13px;
+    }
+
+    .radius-box {
+
+        flex-direction: row;         
+        position: absolute;
+        width: 327px;
+        height: 48px;
+        left: 24px;
+        top: 799px;
+        padding: 9px 24px 13px;
+
+    }
+
+    .temp-box {
+
+        flex-direction: row;        
+        position: absolute;
+        width: 327px;
+        height: 48px;
+        left: 24px;
+        top: 855px;
+        padding: 9px 24px 13px;
+
+    }
+
+    .box-p {
+
+        font-size: 8px;
+        line-height: 16px;
+        letter-spacing: 0.727273px;
+        height: 26px; 
+        padding-top:7px;
+          
+    }
+
+    .box-h3 {
+
         font-size: 20px;
         line-height: 26px;
-        letter-spacing: -0.75px;
-        text-transform: uppercase;
-        color: #FFFFFF;
-        width:100px;
+        letter-spacing: -0.75px;  
+        height: 26px; 
+        text-align: end; 
+ 
     }
 
-    .radius-box{
-        position: absolute;
-width: 327px;
-height: 48px;
-left: 24px;
-top: 799px;
-    }
+    .overview-button {
 
-    .radius-p{
-        margin-left: 24px;
-        text-align: left;
-        position: absolute;
-height: 16px;
-left: 0%;
-right: 86.38%;
-top: calc(50% - 16px/2 + 2px);
-width: 100px;
-font-family: Spartan;
-font-style: normal;
-font-weight: bold;
-font-size: 8px;
-line-height: 16px;
-/* identical to box height, or 200% */
-
-letter-spacing: 0.727273px;
-text-transform: uppercase;
-
-color: #FFFFFF;
-
-mix-blend-mode: normal;
-opacity: 0.5;
-    }
-
-    .radius-h3{
-        width: 72px;
-        left: 231px;
-        right: 24px;
-        margin: 0;
-        text-align: left;
-
-        position: absolute;
-        height: 26px;
-        top: calc(50% - 26px/2);
-        font-family: Antonio;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 20px;
-        line-height: 26px;
-/* identical to box height */
-        text-align: left;
-        letter-spacing: -0.75px;
-        text-transform: uppercase;
-        color: #FFFFFF;
-    }
-
-    .temp-box{
-        position: absolute;
-width: 327px;
-height: 48px;
-left: 24px;
-top: 855px;
-    }
-
-    .temp-p{
-        margin-left: 24px;
-        text-align: left;
-        position: absolute;
-height: 16px;
-left: 0%;
-right: 70.61%;
-top: calc(50% - 16px/2 + 2px);
-width: 100px;
-font-family: Spartan;
-font-style: normal;
-font-weight: bold;
-font-size: 8px;
-line-height: 16px;
-/* identical to box height, or 200% */
-
-letter-spacing: 0.727273px;
-text-transform: uppercase;
-
-color: #FFFFFF;
-
-mix-blend-mode: normal;
-opacity: 0.5;
-    }
-
-    .temp-h3{
-        width: 72px;
-        left: 231px;
-        right: 24px;
-        margin: 0;
-        text-align: left;
-
-        position: absolute;
-height: 26px;
-top: calc(50% - 26px/2);
-font-family: Antonio;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 26px;
-/* identical to box height */
-letter-spacing: -0.75px;
-text-transform: uppercase;
-
-color: #FFFFFF;
-
-
-    }
-
-    .overview-button{
         position: absolute;
         width: 95px;
         height: 50px;
@@ -1983,6 +1682,7 @@ color: #FFFFFF;
         border-width:0 0 5px 0;
         opacity: 0.5;
         border-color: transparent;
+
     }
 
     .structure-button{
@@ -2096,19 +1796,22 @@ color: #FFFFFF;
         opacity: 1;  
     }
 
-    #marssurfaceButton.active{
+    #marssurfaceButton.active {
+
         background-color: transparent;
         border-color:rgb(209,76,50);
         opacity: 1; 
     }
 
-    #jupiteroverviewButton.active{
+    #jupiteroverviewButton.active {
+
         background-color: transparent;
         border-color:rgb(216,58,52);
         opacity: 1;
     }
 
-    #jupiterstructureButton.active{
+    #jupiterstructureButton.active {
+
         background-color: transparent;
         border-color:rgb(216,58,52);
         opacity: 1;  
@@ -2204,8 +1907,22 @@ color: #FFFFFF;
         width: 80px;
     }
 
-    span{
+    .mobile-button {
+
         display: none;
+
     }
+
+    .overview-button:hover{
+        background: transparent;;
+      }
+
+    .structure-button:hover{
+        background: transparent;
+        }
+
+        .surface-button:hover{
+            background: transparent;
+            }
 
 }
